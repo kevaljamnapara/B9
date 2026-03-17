@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Increase Font Size</title>
+</head>
+<body>
+
+<p id="text" style="font-size:15px;">Hello</p>
+<button onclick="increaseFont()">Increase</button>
+
+<script>
+    let i; 
+
+    function increaseFont() {
+        let text = document.getElementById("text");
+        let size = 15;
+
+        clearInterval(i); 
+
+        i = setInterval(() => {
+            size++;
+            text.style.fontSize = size + "px";
+
+            if (size >= 50) {
+                clearInterval(i); 
+            }
+        }, 50);
+    }
+</script>
+
+</body>
+</html>

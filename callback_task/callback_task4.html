@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="t" style="font-size:50px;">Hello</p>
+
+<button onclick="inc()">Increase</button>
+<button onclick="stp()">Stop</button>
+<button onclick="dec()">Decrease</button>
+
+<script>
+    let s = 50;   
+    let i;        
+
+    function inc() {
+        clearInterval(i);
+        i = setInterval(() => {
+            s++;
+            t.style.fontSize = s + "px";
+
+            if (s >= 200) clearInterval(i);
+        }, 100);
+    }
+
+    function dec() {
+        clearInterval(i);
+        i = setInterval(() => {
+            s--;
+            t.style.fontSize = s + "px";
+
+            if (s <= 20) clearInterval(i);
+        }, 100);
+    }
+
+    function stp() {
+        clearInterval(i);
+    }
+</script>
+
+</body>
+</html>

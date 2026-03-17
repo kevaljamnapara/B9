@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Increasing Hello</title>
+</head>
+<body>
+
+<p id="text">Hello</p>
+
+<script>
+    let size = 10; // starting font size
+
+    const text = document.getElementById("text");
+    text.style.color = "blue";
+
+    const interval = setInterval(() => {
+        size++;
+        text.style.fontSize = size + "px";
+
+        if (size >= 50) {
+            clearInterval(interval); // stop when 50px reached
+        }
+    }, 50);
+</script>
+
+</body>
+</html>

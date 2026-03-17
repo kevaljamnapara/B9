@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum Increment</title>
+</head>
+<body>
+
+<p id="output"></p>
+
+<script>
+    let a = 0;
+    let b = 0;
+
+    const output = document.getElementById("output");
+
+    setInterval(() => {
+        a++;
+        b++;
+
+        output.textContent = "Sum: " + (a + b);
+    }, 1000); 
+</script>
+
+</body>
+</html>
