@@ -1,0 +1,22 @@
+<table cellpadding="10" border="1">
+    <tr>
+        <th>T1</th>
+        <th>T2</th>
+        <th>T3</th>
+        <th>T4</th>
+        <th>Total</th>        
+    </tr>
+    <tr>
+        <td><%= t1%></td>
+        <td><%= t2%></td>
+        <td><%= t3%></td>
+        <td><%= t4%></td>
+        <td><%= total%></td>
+    </tr>
+</table>
+
+<% if(total >=35) { %>
+    <h3 style="color: green;">Pass</h3>
+<% }else{ %>
+    <h3 style="color: red;">Fail</h3>
+<% }%>
